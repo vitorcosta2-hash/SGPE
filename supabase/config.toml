@@ -1,0 +1,21 @@
+# Configuração do Supabase CLI para desenvolvimento local (opcional).
+# Em produção, essas opções são feitas no painel do projeto (Authentication).
+project_id = "sgpe"
+
+[api]
+port = 54321
+schemas = ["public"]
+
+[db]
+port = 54322
+major_version = 17
+
+[auth]
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/confirmar"]
+enable_signup = true
+minimum_password_length = 8
+
+[auth.email]
+enable_confirmations = true
+double_confirm_changes = true
